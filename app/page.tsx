@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
-
+import { getTagClassName } from "@/lib/tagColors";
 export default function Home() {
   const posts = getAllPosts();
 
@@ -50,7 +50,7 @@ export default function Home() {
                           {post.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="px-2 py-1 text-xs bg-violet-100 text-violet-700 rounded"
+                              className={getTagClassName(tag)}
                             >
                               {tag}
                             </span>

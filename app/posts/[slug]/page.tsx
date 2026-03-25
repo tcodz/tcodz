@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getPostBySlug, getAllPostSlugs } from "@/lib/posts";
-
+import { getTagClassName } from "@/lib/tagColors";
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
@@ -58,7 +58,7 @@ export default async function PostPage({ params }: PageProps) {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 bg-violet-100 text-violet-700 rounded"
+                      className={getTagClassName(tag)}
                     >
                       {tag}
                     </span>

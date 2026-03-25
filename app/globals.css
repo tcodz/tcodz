@@ -2,10 +2,10 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #0a0a0f;
-  --foreground: #f0f0f5;
-  --muted: #8888a0;
-  --accent: #a78bfa;
+  --background: #f8f9fc;
+  --foreground: #1a1a2e;
+  --muted: #6b7280;
+  --accent: #7c3aed;
 }
 
 @theme inline {
@@ -23,8 +23,7 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Ensure good contrast for text on ambient background */
 ::selection {
-  background: rgba(167, 139, 250, 0.4);
-  color: #ffffff;
+  background: rgba(124, 58, 237, 0.3);
+  color: #1a1a2e;
 }

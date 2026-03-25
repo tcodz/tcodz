@@ -6,12 +6,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <header className="border-b border-white/10 bg-black/30 backdrop-blur-sm">
+      <header className="border-b border-slate-200/50 bg-white/60 backdrop-blur-sm">
         <div className="max-w-3xl mx-auto px-6 py-8">
-          <h1 className="text-3xl font-bold text-white">
+          <h1 className="text-3xl font-bold text-slate-900">
             My Blog
           </h1>
-          <p className="mt-2 text-white/60">
+          <p className="mt-2 text-slate-500">
             记录学习与思考
           </p>
         </div>
@@ -19,29 +19,29 @@ export default function Home() {
 
       <main className="max-w-3xl mx-auto px-6 py-12">
         <section>
-          <h2 className="text-xl font-semibold text-white mb-6">
+          <h2 className="text-xl font-semibold text-slate-900 mb-6">
             文章列表
           </h2>
           
           {posts.length === 0 ? (
-            <p className="text-white/50">暂无文章</p>
+            <p className="text-slate-400">暂无文章</p>
           ) : (
             <ul className="space-y-6">
               {posts.map((post) => (
                 <li key={post.slug}>
                   <Link
                     href={`/posts/${post.slug}`}
-                    className="block p-6 bg-black/50 backdrop-blur-sm rounded-lg border border-white/10 hover:border-white/20 hover:bg-black/60 transition-all"
+                    className="block p-6 bg-white/70 backdrop-blur-sm rounded-lg border border-slate-200/50 hover:border-slate-300 hover:bg-white/90 transition-all shadow-sm"
                   >
                     <article>
-                      <h3 className="text-lg font-semibold text-white mb-2">
+                      <h3 className="text-lg font-semibold text-slate-900 mb-2">
                         {post.title}
                       </h3>
-                      <time className="text-sm text-white/50">
+                      <time className="text-sm text-slate-400">
                         {post.date}
                       </time>
                       {post.excerpt && (
-                        <p className="mt-3 text-white/70 line-clamp-2">
+                        <p className="mt-3 text-slate-600 line-clamp-2">
                           {post.excerpt}
                         </p>
                       )}
@@ -50,7 +50,7 @@ export default function Home() {
                           {post.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="px-2 py-1 text-xs bg-white/10 text-white/70 rounded"
+                              className="px-2 py-1 text-xs bg-violet-100 text-violet-700 rounded"
                             >
                               {tag}
                             </span>
@@ -66,9 +66,9 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-white/10 mt-auto">
+      <footer className="border-t border-slate-200/50 mt-auto">
         <div className="max-w-3xl mx-auto px-6 py-6">
-          <p className="text-center text-sm text-white/40">
+          <p className="text-center text-sm text-slate-400">
             Powered by Next.js & GitHub Pages
           </p>
         </div>

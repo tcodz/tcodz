@@ -41,11 +41,11 @@ export default function AmbientBackground({
     const initLights = (width: number, height: number) => {
       const lights: AmbientLight[] = [];
       const colors = [
-        { h: 280, s: 60, l: 30 }, // Purple
-        { h: 200, s: 70, l: 30 }, // Cyan
-        { h: 340, s: 60, l: 30 }, // Pink
-        { h: 160, s: 50, l: 25 }, // Teal
-        { h: 30, s: 60, l: 30 },  // Orange
+        { h: 280, s: 50, l: 85 }, // Purple
+        { h: 200, s: 60, l: 85 }, // Cyan
+        { h: 340, s: 50, l: 85 }, // Pink
+        { h: 160, s: 40, l: 80 }, // Teal
+        { h: 30, s: 50, l: 85 },  // Orange
       ];
 
       for (let i = 0; i < lightCount; i++) {
@@ -81,8 +81,8 @@ export default function AmbientBackground({
       const { width, height } = canvas;
       timeRef.current += 0.016;
 
-      // Clear with dark background
-      ctx.fillStyle = "#0a0a0f";
+      // Clear with light background
+      ctx.fillStyle = "#f8f9fc";
       ctx.fillRect(0, 0, width, height);
 
       lightsRef.current.forEach((light) => {
@@ -104,7 +104,7 @@ export default function AmbientBackground({
         // Create radial gradient for soft glow
         const gradient = ctx.createRadialGradient(x, y, 0, x, y, light.radius);
         
-        const alpha = 0.06 + 0.04 * Math.sin(timeRef.current * light.breathSpeed + light.breathPhase);
+        const alpha = 0.4 + 0.2 * Math.sin(timeRef.current * light.breathSpeed + light.breathPhase);
         const innerColor = `hsla(${light.color.h}, ${light.color.s}%, ${light.color.l}%, ${alpha})`;
         const outerColor = `hsla(${light.color.h}, ${light.color.s}%, ${light.color.l}%, 0)`;
         

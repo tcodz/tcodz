@@ -9,10 +9,10 @@ export default function Home() {
       <header className="border-b border-white/10 backdrop-blur-sm">
         <div className="max-w-3xl mx-auto px-6 py-8">
           <h1 className="text-3xl font-bold text-white">
-            What Fuxk
+            My Blog
           </h1>
           <p className="mt-2 text-white/60">
-            Hello World
+            记录学习与思考
           </p>
         </div>
       </header>

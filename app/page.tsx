@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <header className="border-b border-white/10 backdrop-blur-sm">
+      <header className="border-b border-white/10 bg-black/30 backdrop-blur-sm">
         <div className="max-w-3xl mx-auto px-6 py-8">
           <h1 className="text-3xl font-bold text-white">
             My Blog
@@ -31,7 +31,7 @@ export default function Home() {
                 <li key={post.slug}>
                   <Link
                     href={`/posts/${post.slug}`}
-                    className="block p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all"
+                    className="block p-6 bg-black/50 backdrop-blur-sm rounded-lg border border-white/10 hover:border-white/20 hover:bg-black/60 transition-all"
                   >
                     <article>
                       <h3 className="text-lg font-semibold text-white mb-2">

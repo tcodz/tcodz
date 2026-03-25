@@ -34,7 +34,7 @@ export default async function PostPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen">
-      <header className="border-b border-white/10 backdrop-blur-sm">
+      <header className="border-b border-white/10 bg-black/30 backdrop-blur-sm">
         <div className="max-w-3xl mx-auto px-6 py-8">
           <Link
             href="/"
@@ -46,7 +46,7 @@ export default async function PostPage({ params }: PageProps) {
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-12">
-        <article>
+        <article className="bg-black/40 backdrop-blur-sm rounded-xl p-8 border border-white/5">
           <header className="mb-8">
             <h1 className="text-3xl font-bold text-white mb-4">
               {post.title}
